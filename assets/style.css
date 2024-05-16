@@ -81,7 +81,7 @@ body {
 }
 .about-me__title {
   margin-top: 1em;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   font-size: 30px;
 }
 .about-me__introduction {
@@ -89,7 +89,9 @@ body {
   font-weight: 800;
   font-style: italic;
   width: 60%;
+  font-size: 16px;
 }
+
 #about-me p {
   width: 80%;
   font-size: 16px;
@@ -202,10 +204,13 @@ body {
   position: relative;
   padding-inline: 100px;
   padding-block: 100px;
+  transition: padding 0.5s ease;
 }
 
 #contact .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 500px;
 }
 .picture.right::before {
   content: " ";
@@ -253,15 +258,11 @@ input[type="submit"] {
   .picture {
     flex: 2;
   }
-  #about,
-  #contact .container {
-    align-items: center;
-  }
   .about-me__title {
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 15px;
   }
-  #about-me h6,
+  #about-me h2,
   #about-me p {
     width: 100%;
   }
@@ -314,8 +315,14 @@ input[type="submit"] {
     left: auto;
     z-index: 0;
   }
+  #contact {
+    height: 1000px;
+    padding-inline: 50px; /* Nouveau padding horizontal pour les écrans plus petits */
+    padding-block: 50px; /* Nouveau padding vertical pour les écrans plus petits */
+  }
 
   #contact .container {
+    display: flex;
     flex-direction: column;
   }
   #contact .picture.right {
@@ -356,8 +363,7 @@ input[type="submit"] {
   .service {
     max-width: 90%;
   }
-  #about,
-  #contact {
+  #about {
     padding-inline: 2em;
     padding-block: 2em;
   }
@@ -371,6 +377,10 @@ input[type="submit"] {
   }
   .quote__text {
     font-size: 30px;
-  font-weight: 300;
+    font-weight: 300;
+  }
+  #contact {
+    padding-inline: 25px; /* Nouveau padding horizontal pour les écrans plus petits */
+    padding-block: 25px; /* Nouveau padding vertical pour les écrans plus petits */
   }
 }
