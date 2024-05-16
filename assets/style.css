@@ -47,7 +47,7 @@ body {
   display: flex;
   background-color: #f6d2b8;
   padding-inline: 100px;
-  padding-block: 100px;
+  padding-block: 50px;
   position: relative;
 }
 
@@ -71,6 +71,10 @@ body {
 .picture img {
   width: 100%;
   height: 100%;
+  min-width: 395px;
+  max-width: 395px;
+  min-height: 395px;
+  max-height: 395px;
 }
 #about-me {
   flex: 2;
@@ -264,11 +268,17 @@ input[type="submit"] {
 
 @media all and (max-width: 1000px) {
   #about {
+    display: flex;
     flex-direction: column;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
   }
+
   .picture {
-    width: 50%;
+    max-width: 100%; /* L'image ne dépassera jamais la largeur de son parent */
+    max-height: 100%; /* L'image ne dépassera jamais la hauteur de son parent */
   }
+
   .picture.left::before {
     width: 100%;
     height: 30%;
@@ -353,7 +363,13 @@ input[type="submit"] {
   form {
     width: 100%;
   }
-  .picture {
-    width: 80%;
+  .picture img {
+    width: 100%;
+    min-width: 10%;
+    min-height: 10%;
+  }
+  .quote__text {
+    font-size: 30px;
+  font-weight: 300;
   }
 }
