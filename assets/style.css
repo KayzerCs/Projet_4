@@ -113,6 +113,7 @@ body {
 }
 .nav-pills .nav-link {
   color: #000;
+  cursor: pointer;
 }
 .item-column {
   position: relative;
@@ -330,7 +331,7 @@ input[type="submit"] {
   }
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 730px) {
   .top-header {
     flex-direction: column;
     padding-inline: 0;
